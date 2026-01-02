@@ -2,7 +2,9 @@
 
 A modern, production-grade inventory management dashboard built with React, TypeScript, and Tailwind CSS. Designed for retail store managers to browse, search, and analyze product inventory with a beautiful, premium UI.
 
-🔗 **Live Repository:** [github.com/rah-9/StoreAdmin-Catalog-Inventory-Portal](https://github.com/rah-9/StoreAdmin-Catalog-Inventory-Portal)
+� **Live Demo:** [store-admin-catalog-inventory-porta.vercel.app](https://store-admin-catalog-inventory-porta.vercel.app/)
+
+📦 **Repository:** [github.com/rah-9/StoreAdmin-Catalog-Inventory-Portal](https://github.com/rah-9/StoreAdmin-Catalog-Inventory-Portal)
 
 ![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=flat&logo=react&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.6.2-3178C6?style=flat&logo=typescript&logoColor=white)
