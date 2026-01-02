@@ -2,44 +2,65 @@
 
 A modern, production-grade inventory management dashboard built with React, TypeScript, and Tailwind CSS. Designed for retail store managers to browse, search, and analyze product inventory with a beautiful, premium UI.
 
-![StoreAdmin Portal](https://img.shields.io/badge/React-18.3.1-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5.6.2-blue) ![Tailwind](https://img.shields.io/badge/Tailwind-3.4.0-blue) ![Vite](https://img.shields.io/badge/Vite-6.4.1-purple)
+🔗 **Live Repository:** [github.com/rah-9/StoreAdmin-Catalog-Inventory-Portal](https://github.com/rah-9/StoreAdmin-Catalog-Inventory-Portal)
+
+![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=flat&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.6.2-3178C6?style=flat&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.0-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-6.4.1-646CFF?style=flat&logo=vite&logoColor=white)
+
+---
+
+## 📸 Screenshots
+
+### Home Page
+- Hero section with gradient accents
+- Feature cards with hover effects
+- Quick navigation CTAs
+
+### Inventory Overview
+- List & Grid view toggle
+- Category filter & sorting
+- Debounced search (300ms)
+- Load More pagination
+
+### Product Details
+- Image gallery with thumbnails
+- Price, discount, rating display
+- Similar products section
+
+---
 
 ## ✨ Features
 
-### 📊 Inventory Overview
-- **List & Grid Views** - Toggle between compact list and visual grid layouts
-- **Smart Search** - Debounced search (300ms) with request cancellation
-- **Client-Side Sorting** - Sort by Name (A-Z, Z-A) or Price (Low-High, High-Low)
-- **Category Filtering** - Filter products by any category
-- **Pagination** - Load More button for seamless browsing (20 products per load)
+| Feature | Description |
+|---------|-------------|
+| 🔍 **Smart Search** | Debounced input (300ms) with request cancellation |
+| 📊 **Dual View Modes** | Toggle between list and grid layouts |
+| 🏷️ **Category Filtering** | Filter products by any category |
+| ⬆️⬇️ **Client-Side Sorting** | Sort by Name or Price (ascending/descending) |
+| 📄 **Pagination** | Load More button (20 products per page) |
+| 🖼️ **Image Gallery** | Product detail with thumbnail navigation |
+| 🔗 **Similar Products** | 6 related items from same category |
+| 💀 **Skeleton Loaders** | Smooth loading states (no spinners) |
+| 🎨 **Premium UI** | Lavender/purple theme with soft shadows |
 
-### 🛍️ Product Details
-- **Image Gallery** - Browse multiple product images with thumbnail navigation
-- **Detailed Information** - Price, discount, rating, description, specifications
-- **Similar Products** - 6 related products from the same category
-
-### 📁 Catalogue
-- **Visual Categories** - Grid of category cards with representative thumbnails
-- **Easy Navigation** - Click any category to view its products
-
-### 🎨 Design System
-- **Light Theme** - Soft lavender/purple gradient palette
-- **Skeleton Loaders** - Smooth loading states (no spinners)
-- **Micro-animations** - Hover effects, transitions, and smooth interactions
-- **Responsive** - Works on desktop and tablet devices
+---
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
 
 ### Installation
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
-cd store-admin-portal
+git clone https://github.com/rah-9/StoreAdmin-Catalog-Inventory-Portal.git
+
+# Navigate to project
+cd StoreAdmin-Catalog-Inventory-Portal
 
 # Install dependencies
 npm install
@@ -48,111 +69,70 @@ npm install
 npm run dev
 ```
 
-The app will be available at **http://localhost:5173/**
+Open **http://localhost:5173/** in your browser.
 
-### Build for Production
+### Production Build
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## 📁 Project Structure
-
-```
-src/
-├── components/
-│   ├── Layout/
-│   │   ├── Sidebar.tsx       # Navigation sidebar
-│   │   ├── Header.tsx        # Top header with search
-│   │   └── Layout.tsx        # Main layout wrapper
-│   ├── ui/
-│   │   ├── Button.tsx        # Primary/secondary/ghost buttons
-│   │   ├── Badge.tsx         # Status badges
-│   │   ├── Card.tsx          # Base card component
-│   │   └── Skeleton.tsx      # Loading skeletons
-│   ├── products/
-│   │   ├── ProductCard.tsx   # Grid view product card
-│   │   └── ProductRow.tsx    # List view product row
-│   ├── categories/
-│   │   └── CategoryCard.tsx  # Category selection card
-│   └── common/
-│       ├── EmptyState.tsx    # Empty results display
-│       ├── ErrorState.tsx    # Error with retry
-│       └── LoadMoreButton.tsx
-├── context/
-│   └── ProductContext.tsx    # Global state management
-├── hooks/
-│   └── useDebounce.ts        # Debounce hook for search
-├── pages/
-│   ├── HomePage.tsx          # Welcome/landing page
-│   ├── InventoryPage.tsx     # Product listing
-│   ├── ProductDetailPage.tsx # Single product view
-│   ├── CataloguePage.tsx     # Category grid
-│   └── CategoryProductsPage.tsx
-├── services/
-│   ├── api.ts                # Axios instance
-│   └── productService.ts     # API methods
-├── types/
-│   └── index.ts              # TypeScript interfaces
-├── App.tsx                   # Router configuration
-├── main.tsx                  # Entry point
-└── index.css                 # Global styles
-```
-
-## 🔌 API Integration
-
-This app uses the [DummyJSON](https://dummyjson.com) API for product data.
-
-| Endpoint | Description |
-|----------|-------------|
-| `GET /products` | Paginated product list |
-| `GET /products/{id}` | Single product details |
-| `GET /products/search?q=` | Search products |
-| `GET /products/categories` | All categories |
-| `GET /products/category/{slug}` | Products by category |
-
-### Features
-- ✅ Centralized Axios instance with interceptors
-- ✅ Fully typed responses (no `any`)
-- ✅ Abort controller for cancelling previous search requests
-- ✅ Error handling with retry options
+---
 
 ## 🛠️ Tech Stack
 
 | Technology | Purpose |
 |------------|---------|
-| **React 18** | UI framework |
-| **TypeScript** | Type safety |
-| **Tailwind CSS** | Styling |
-| **React Router v6** | Navigation |
-| **Axios** | HTTP client |
-| **Context API** | State management |
-| **Vite** | Build tool |
+| **React 18** | UI framework with hooks |
+| **TypeScript** | Type safety & IntelliSense |
+| **Tailwind CSS** | Utility-first styling |
+| **React Router v6** | Client-side routing |
+| **Axios** | HTTP client with interceptors |
+| **Context API** | Global state management |
+| **Vite** | Fast build tool & HMR |
 
-## 📜 Available Scripts
+---
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
-| `npm run preview` | Preview production build |
-| `npm run lint` | Run ESLint |
+## 📁 Project Structure
 
-## 🚢 Deployment
-
-### Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Import the repository in [Vercel](https://vercel.com)
-3. Vercel will auto-detect Vite and deploy
-
-### Manual Deployment
-
-```bash
-npm run build
-# Deploy the `dist` folder to any static hosting
 ```
+src/
+├── components/
+│   ├── Layout/          # Sidebar, Header, Layout wrapper
+│   ├── ui/              # Button, Badge, Card, Skeleton
+│   ├── products/        # ProductCard, ProductRow
+│   ├── categories/      # CategoryCard
+│   └── common/          # EmptyState, ErrorState, LoadMore
+├── context/             # ProductContext (global state)
+├── hooks/               # useDebounce
+├── pages/               # HomePage, InventoryPage, etc.
+├── services/            # API layer (Axios)
+├── types/               # TypeScript interfaces
+└── App.tsx              # Router configuration
+```
+
+---
+
+## 🔌 API Integration
+
+**Base URL:** `https://dummyjson.com`
+
+| Endpoint | Usage |
+|----------|-------|
+| `GET /products` | Paginated product list |
+| `GET /products/{id}` | Single product details |
+| `GET /products/search?q=` | Search with abort controller |
+| `GET /products/categories` | All categories |
+| `GET /products/category/{slug}` | Products by category |
+
+**Key Implementation Details:**
+- ✅ Centralized Axios instance
+- ✅ Fully typed responses (no `any`)
+- ✅ Abort controller for search requests
+- ✅ Error handling with retry options
+
+---
 
 ## 📱 Routes
 
@@ -164,17 +144,58 @@ npm run build
 | `/catalogue` | Category Grid |
 | `/catalogue/:category` | Category Products |
 
-## 🎯 Key Design Decisions
+---
 
-1. **Client-Side Sorting** - DummyJSON doesn't support server-side sorting, so sorting is handled in the frontend after fetching
-2. **Load More vs Infinite Scroll** - Load More button gives users control over data loading
-3. **Skeleton Loaders** - Provides better UX than spinners by showing content shape
-4. **Context API** - Sufficient for this scale; no need for Redux/Zustand complexity
+## 📜 Available Scripts
 
-## 📄 License
-
-MIT License - feel free to use this project for learning or as a starting point for your own applications.
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start dev server (port 5173) |
+| `npm run build` | Production build |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint |
 
 ---
 
-Built with ❤️ using React + TypeScript + Tailwind CSS
+## 🚢 Deployment
+
+### Vercel (Recommended)
+
+1. Push code to GitHub ✅
+2. Import repository in [Vercel](https://vercel.com)
+3. Deploy automatically (Vite auto-detected)
+
+### Manual
+
+```bash
+npm run build
+# Upload `dist/` folder to any static host
+```
+
+---
+
+## 🎯 Design Decisions
+
+1. **Client-Side Sorting** - API doesn't support server sorting
+2. **Load More Button** - Gives users control vs infinite scroll
+3. **Skeleton Loaders** - Better UX by showing content shape
+4. **Context API** - Sufficient for app scale, no Redux needed
+5. **Debounced Search** - 300ms delay prevents API spam
+
+---
+
+## 👤 Author
+
+**Rahul** - [GitHub Profile](https://github.com/rah-9)
+
+---
+
+## 📄 License
+
+MIT License - Free to use for learning and personal projects.
+
+---
+
+<p align="center">
+  Built with ❤️ using React + TypeScript + Tailwind CSS
+</p>
